@@ -1,97 +1,94 @@
-🐦 TweeTrek
+# 🐦 TWEE TREK  
 
-A scalable backend for a Twitter-like social media application, built with Node.js, Express, MongoDB, and AWS S3.
+A scalable backend for a Twitter-like social media application, built with **Node.js, Express, MongoDB, and AWS S3**.  
 
-This backend powers core social features such as tweets, likes, comments, authentication, and image uploads — all designed with a clean architecture using repositories, services, and controllers.
+This backend handles core social features such as tweets, likes, comments, authentication, and image uploads, following a clean architecture with repositories, services, and controllers.  
 
-🚀 Features
+---
 
-✅ User Authentication – Signup/Login with JWT
+## 🚀 Features  
 
-✅ Tweets – Create, read, and paginate tweets (max 250 chars per tweet)
+- ✅ User Authentication (Signup/Login with JWT)  
+- ✅ Create, read, and paginate tweets (max 250 chars per tweet)  
+- ✅ Image uploads for tweets (via AWS S3)  
+- ✅ Like/Unlike tweets & comments  
+- ✅ Nested comments (comment on a tweet or another comment)  
+- ✅ Hashtag support for tweets  
+- ✅ REST API with modular architecture  
+- ✅ Secure and scalable codebase  
 
-✅ Image Uploads – Store tweet images on AWS S3
+---
 
-✅ Likes – Like/Unlike tweets & comments
+## 📂 Project Structure  
 
-✅ Nested Comments – Comment on a tweet or another comment
+/src
+<img width="571" height="237" alt="image" src="https://github.com/user-attachments/assets/08842caa-aab9-4886-a781-737e8db4ba0c" />
 
-✅ Hashtag Support – Add hashtags inside tweets
 
-✅ REST API – Modular, maintainable architecture
+markdown
+Copy code
 
-✅ Scalable & Secure – Clean, production-ready codebase
+---
 
-⚙️ Tech Stack
+## ⚙️ Tech Stack  
 
-Backend Framework: Node.js + Express
+- **Backend Framework:** Node.js + Express  
+- **Database:** MongoDB + Mongoose  
+- **Authentication:** JWT (JSON Web Tokens)  
+- **File Storage:** AWS S3 (via Multer-S3)  
+- **Other Tools:** dotenv, bcrypt, error handling utilities  
 
-Database: MongoDB + Mongoose
+---
 
-Authentication: JWT (JSON Web Tokens)
+## 🔑 API Features  
 
-File Storage: AWS S3 (via Multer-S3)
+### Authentication  
+- **POST** `/api/v1/signup` → Register a new user  
+- **POST** `/api/v1/login` → Login and receive JWT  
 
-Other Tools: dotenv, bcrypt, error handling utilities
+### Tweets  
+- **POST** `/api/v1/tweets` → Create a tweet (max 250 chars, optional image)  
+- **GET** `/api/v1/tweets?page=1&limit=10` → Fetch paginated tweets  
 
-🔑 API Endpoints
-Authentication
+### Likes  
+- **POST** `/api/v1/likes/toggle` → Like/Unlike a tweet or comment  
 
-POST /api/v1/signup → Register a new user
+### Comments  
+- **POST** `/api/v1/comments` → Add a comment to a tweet or another comment  
 
-POST /api/v1/login → Login and receive JWT
+---
 
-Tweets
+## 🛠️ Installation  
 
-POST /api/v1/tweets → Create a tweet (max 250 chars, optional image)
+### Prerequisites  
+- Node.js & npm installed  
+- MongoDB (local or remote)  
+- AWS account (for S3 bucket setup)  
 
-GET /api/v1/tweets?page=1&limit=10 → Fetch paginated tweets
+### Steps  
 
-Likes
-
-POST /api/v1/likes/toggle → Like/Unlike a tweet or comment
-
-Comments
-
-POST /api/v1/comments → Add a comment to a tweet or another comment
-
-🛠️ Installation & Setup
-Prerequisites
-
-Node.js
- & npm installed
-
-MongoDB
- (local or remote instance)
-
-AWS account (for S3 bucket setup)
-
-Steps
-
-1️⃣ Clone the repo
-
+1️⃣ **Clone the repo**  
+```bash
 git clone https://github.com/thecodingbeetle/TweeTrek.git
 cd TweeTrek
-
-
 2️⃣ Install dependencies
 
+bash
+Copy code
 npm install
-
-
 3️⃣ Configure environment variables → Create a .env file:
 
+env
+Copy code
 MONGODB_URI=
 JWT_SECRET=
 AWS_REGION=
 AWS_SECRET_ACCESS_KEY=
 ACCESS_KEY_ID=
 BUCKET_NAME=
-
-
 4️⃣ Run the server
 
+
+Copy code
 npm start
-
-
-👉 Server will run at: http://localhost:3000
+Server runs at: http://localhost:3000
