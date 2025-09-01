@@ -1,23 +1,26 @@
-TweeTrek
+🐦 TweeTrek
 
 A scalable backend for a Twitter-like social media application, built with Node.js, Express, MongoDB, and AWS S3.
 
-This backend handles core social features such as tweets, likes, comments, authentication, and image uploads, following a clean architecture with repositories, services, and controllers.
+This backend powers core social features such as tweets, likes, comments, authentication, and image uploads — all designed with a clean architecture using repositories, services, and controllers.
 
 🚀 Features
 
-✅ User Authentication (Signup/Login with JWT)
-✅ Create, read, and paginate tweets (max 250 chars per tweet)
-✅ Image uploads for tweets (via AWS S3)
-✅ Like/unlike tweets & comments
-✅ Nested comments (comment on a tweet or another comment)
-✅ Hashtag support for tweets
-✅ REST API with modular architecture
-✅ Secure and scalable codebase
+✅ User Authentication – Signup/Login with JWT
 
-📂 Project Structure
-<img width="155" height="242" alt="image" src="https://github.com/user-attachments/assets/94af06ff-d7a0-4b19-a715-1e8114449ae6" />
+✅ Tweets – Create, read, and paginate tweets (max 250 chars per tweet)
 
+✅ Image Uploads – Store tweet images on AWS S3
+
+✅ Likes – Like/Unlike tweets & comments
+
+✅ Nested Comments – Comment on a tweet or another comment
+
+✅ Hashtag Support – Add hashtags inside tweets
+
+✅ REST API – Modular, maintainable architecture
+
+✅ Scalable & Secure – Clean, production-ready codebase
 
 ⚙️ Tech Stack
 
@@ -31,7 +34,7 @@ File Storage: AWS S3 (via Multer-S3)
 
 Other Tools: dotenv, bcrypt, error handling utilities
 
-🔑 API Features
+🔑 API Endpoints
 Authentication
 
 POST /api/v1/signup → Register a new user
@@ -52,12 +55,14 @@ Comments
 
 POST /api/v1/comments → Add a comment to a tweet or another comment
 
-🛠️ Installation
+🛠️ Installation & Setup
 Prerequisites
 
-Node.js & npm installed
+Node.js
+ & npm installed
 
-MongoDB (local or remote)
+MongoDB
+ (local or remote instance)
 
 AWS account (for S3 bucket setup)
 
@@ -65,8 +70,8 @@ Steps
 
 1️⃣ Clone the repo
 
-git clone https://github.com/<your-username>/twitter-backend.git
-cd twitter-backend
+git clone https://github.com/thecodingbeetle/TweeTrek.git
+cd TweeTrek
 
 
 2️⃣ Install dependencies
@@ -76,12 +81,12 @@ npm install
 
 3️⃣ Configure environment variables → Create a .env file:
 
-MONGODB_URI=<your-mongodb-uri>
-JWT_SECRET=<your-jwt-secret>
-AWS_REGION=<your-aws-region>
-AWS_SECRET_ACCESS_KEY=<your-aws-secret>
-ACCESS_KEY_ID=<your-aws-id>
-BUCKET_NAME=<your-bucket-name>
+MONGODB_URI=
+JWT_SECRET=
+AWS_REGION=
+AWS_SECRET_ACCESS_KEY=
+ACCESS_KEY_ID=
+BUCKET_NAME=
 
 
 4️⃣ Run the server
@@ -89,4 +94,4 @@ BUCKET_NAME=<your-bucket-name>
 npm start
 
 
-Server runs at: http://localhost:3000
+👉 Server will run at: http://localhost:3000
